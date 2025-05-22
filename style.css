@@ -1,0 +1,210 @@
+/* Reset de base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b2b2b;
+    padding: 10px 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Icône hamburger */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Menu de navigation */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: #00bfff;
+    border-radius: 5px;
+}
+
+/* Styles responsives */
+@media screen and (max-width: 768px) {
+  /* Icône hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu caché par défaut */
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2b2b2b;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 10px;
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Afficher le menu lorsque la case est cochée */
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 80px 80px;
+    flex-wrap: wrap;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.btn {
+    background-color: #00bfff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #009ccc;
+}
+
+/* Image stylée */
+.hero-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+    border: 3px solid #00bfff;
+}
+
+/* Profil */
+.section-content {
+    margin-top: 90px;
+}
+
+.profil-container {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.profil-container h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profil-container p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Ajustement pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-text p {
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+/* Compétences */
+.couleur {
+color: #000;
+}
+.interets-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.interets-list li {
+    margin: 8px 0;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
